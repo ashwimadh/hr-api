@@ -1,7 +1,6 @@
 pipeline {
     agent any
-    
-    stages {
+        stages {
         stage('Git Checkout') {
             steps {
                 git branch: "${params.branchName}", credentialsId: 'github-tokens', url: 'https://github.com/javahometech/hr-api'
